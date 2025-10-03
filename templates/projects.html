@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - {{ data.name }}{% endblock %}
+
+{% block content %}
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+                <h1>My Projects</h1>
+                <p class="lead">A showcase of my work and personal projects</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            {% for project in data.projects %}
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.name }}</h5>
+                        <p class="card-text">{{ project.description }}</p>
+                        
+                        <div class="project-technologies mb-3">
+                            {% for tech in project.technologies %}
+                            <span class="badge bg-primary me-1 mb-1">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                <i class="fab fa-github me-1"></i> Code
+                            </a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-external-link-alt me-1"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Add more projects section -->
+        <div class="row mt-5">
+            <div class="col-lg-12 text-center">
+                <div class="card bg-light">
+                    <div class="card-body py-5">
+                        <h4>More Projects Coming Soon!</h4>
+                        <p class="text-muted">I'm constantly working on new projects. Check back soon for updates!</p>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary">
+                            <i class="fas fa-envelope me-2"></i>Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

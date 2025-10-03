@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}About - {{ data.name }}{% endblock %}
+
+{% block content %}
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="text-center mb-5">About Me</h1>
+                
+                <div class="row mb-5">
+                    <div class="col-md-4 text-center">
+                        <div class="profile-placeholder-large">
+                            <i class="fas fa-user fa-6x text-muted"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>{{ data.name }}</h3>
+                        <h5 class="text-muted mb-3">{{ data.title }}</h5>
+                        <p class="lead">{{ data.about }}</p>
+                        
+                        <div class="contact-info mt-4">
+                            <p><i class="fas fa-envelope me-2"></i> {{ data.email }}</p>
+                            <p><i class="fas fa-phone me-2"></i> {{ data.phone }}</p>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> {{ data.location }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="mb-5">
+                    <h3 class="mb-4">Skills & Technologies</h3>
+                    <div class="skills-grid">
+                        {% for skill in data.skills %}
+                        <span class="skill-badge">{{ skill }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="mb-5">
+                    <h3 class="mb-4">Education</h3>
+                    {% for edu in data.education %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ edu.degree }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ edu.school }}</h6>
+                            <p class="text-muted">{{ edu.year }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Experience Section -->
+                <div class="mb-5">
+                    <h3 class="mb-4">Professional Experience</h3>
+                    {% for exp in data.experience %}
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ exp.title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ exp.company }}</h6>
+                            <p class="text-muted small">{{ exp.duration }}</p>
+                            <p class="card-text">{{ exp.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
