@@ -66,6 +66,36 @@
                     </div>
                     {% endfor %}
                 </div>
+
+                <!-- Certifications Section -->
+                <div class="mb-5">
+                    <h3 class="mb-4">Certifications</h3>
+                    {% for cert in data.certifications %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ cert.name }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ cert.issuer }}</h6>
+                            <p class="text-muted small">Issued {{ cert.date }}</p>
+                            <p class="text-muted small">Credential ID: {{ cert.credential }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Volunteering Section -->
+                <div class="mb-5">
+                    <h3 class="mb-4">Volunteering Experience</h3>
+                    {% for vol in data.volunteering %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ vol.role }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ vol.organization }}</h6>
+                            <p class="text-muted small">{{ vol.duration }}</p>
+                            <span class="badge bg-info">{{ vol.category }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

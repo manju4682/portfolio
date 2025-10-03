@@ -2,50 +2,107 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Portfolio data - you can modify this with your actual details
+# Portfolio data - updated with actual LinkedIn information
 portfolio_data = {
-    "name": "Your Name",
-    "title": "Software Developer",
-    "email": "your.email@example.com",
-    "phone": "+1 (555) 123-4567",
-    "location": "Your City, Country",
-    "about": "Passionate software developer with experience in web development, data analysis, and problem-solving. Always eager to learn new technologies and take on challenging projects.",
+    "name": "Manjunath T",
+    "title": "Software Engineer II at Cisco",
+    "email": "4682ssbj@gmail.com",
+    "phone": "+91 7899643162",
+    "location": "Bengaluru, Karnataka, India",
+    "about": "Experienced Software Engineer with 3+ years at Cisco, specializing in service automation and network configuration compliance. Passionate about automation solutions, Infrastructure as Code (IaC), and enhancing efficiency through innovative technology solutions. Strong background in cross-team collaboration and continuous integration.",
     "skills": [
-        "Python", "JavaScript", "Flask", "HTML/CSS", 
-        "Git", "SQL", "React", "Node.js"
+        "Python", "JavaScript", "Camunda", "Git", "CI/CD", 
+        "Infrastructure as Code (IaC)", "Automation", "Agile Methodologies",
+        "Cross-team Collaboration", "Network Services", "Flask", "HTML/CSS"
     ],
     "experience": [
         {
-            "title": "Software Developer",
-            "company": "Tech Company",
-            "duration": "2022 - Present",
-            "description": "Developed web applications using Python and JavaScript frameworks."
+            "title": "Software Engineer II",
+            "company": "Cisco",
+            "duration": "Nov 2023 - Present",
+            "description": "Leading advanced automation projects and service automation solutions for Network Services Team. Continuing to deliver robust automation using Infrastructure as Code (IaC) model and enhancing team efficiency."
         },
         {
-            "title": "Junior Developer",
-            "company": "Startup Inc",
-            "duration": "2021 - 2022",
-            "description": "Worked on various projects involving database design and API development."
+            "title": "Software Engineer",
+            "company": "Cisco",
+            "duration": "Aug 2022 - Oct 2023",
+            "description": "Delivered automated network configuration compliance project for Network Services Team. Utilized Camunda, JavaScript, Python, Git and CI/CD for robust automation using Infrastructure as Code (IaC) model. Led the project to successful implementation and collaborated with network services team to enhance efficiency and security through automation solutions."
+        },
+        {
+            "title": "Technical Undergraduate Intern",
+            "company": "Cisco",
+            "duration": "Jan 2022 - Jul 2022",
+            "description": "Implemented automation solutions using Camunda-based in-house platforms like BPA and NSO. Utilized JavaScript and Python for scripting and automation tasks. Contributed to enhancing efficiency within the network services team through process automation and optimization."
         }
     ],
     "education": [
         {
-            "degree": "Bachelor of Computer Science",
-            "school": "University Name",
-            "year": "2021"
+            "degree": "Bachelor's degree, Computer Science",
+            "school": "JSS Science and Technology University",
+            "year": "2018 - 2022"
+        },
+        {
+            "degree": "Primary and Secondary Education, Science (10+2)",
+            "school": "Sainik School, Bijapur",
+            "year": "2011 - 2018"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Technical Support Fundamentals",
+            "issuer": "Coursera",
+            "date": "Aug 2020",
+            "credential": "MHDY827SB3PU"
+        },
+        {
+            "name": "The Bits and Bytes of Computer Networking",
+            "issuer": "Coursera",
+            "date": "Aug 2020",
+            "credential": "MMVAJNFP9V4R"
+        }
+    ],
+    "volunteering": [
+        {
+            "role": "Cadet",
+            "organization": "National Cadet Corps - India",
+            "duration": "Jun 2011 - Mar 2018",
+            "category": "Education"
+        },
+        {
+            "role": "Editor",
+            "organization": "IEEE SJCE",
+            "duration": "Jun 2020 - Jun 2022",
+            "category": "Science and Technology"
         }
     ],
     "projects": [
         {
-            "name": "Portfolio Website",
-            "description": "A personal portfolio website built with Flask and Bootstrap",
-            "technologies": ["Python", "Flask", "HTML", "CSS", "Bootstrap"]
+            "name": "Network Configuration Compliance Automation",
+            "description": "Automated network configuration compliance system for Cisco's Network Services Team using Camunda workflow engine and Infrastructure as Code principles",
+            "technologies": ["Python", "JavaScript", "Camunda", "Git", "CI/CD", "IaC"],
+            "status": "Completed",
+            "impact": "Enhanced security and efficiency for network services"
         },
         {
-            "name": "Data Analysis Tool",
-            "description": "A tool for analyzing and visualizing data using Python",
-            "technologies": ["Python", "Pandas", "Matplotlib", "Jupyter"]
+            "name": "Service Automation Platform",
+            "description": "Implemented automation solutions using Camunda-based in-house platforms (BPA and NSO) to enhance network services efficiency",
+            "technologies": ["Python", "JavaScript", "Camunda", "BPA", "NSO"],
+            "status": "Completed",
+            "impact": "Streamlined network service operations"
+        },
+        {
+            "name": "Personal Portfolio Website",
+            "description": "A responsive personal portfolio website built with Flask and Bootstrap, featuring modern UI/UX and deployed on GitHub",
+            "technologies": ["Python", "Flask", "HTML", "CSS", "Bootstrap", "Git"],
+            "status": "Live",
+            "impact": "Professional online presence"
         }
+    ],
+    "achievements": [
+        "Led successful implementation of network configuration compliance automation",
+        "3+ years of continuous service at Cisco with promotions",
+        "Strong background in cross-team collaboration and project leadership",
+        "Active contributor to automation and efficiency improvements"
     ]
 }
 
