@@ -103,6 +103,29 @@ portfolio_data = {
         "3+ years of continuous service at Cisco with promotions",
         "Strong background in cross-team collaboration and project leadership",
         "Active contributor to automation and efficiency improvements"
+    ],
+    "testimonials": [
+        {
+            "name": "Team Lead",
+            "position": "Senior Network Engineer",
+            "company": "Cisco",
+            "text": "Manjunath consistently delivers high-quality automation solutions and shows excellent technical leadership skills.",
+            "rating": 5
+        },
+        {
+            "name": "Project Manager",
+            "position": "Technical Project Manager",
+            "company": "Cisco",
+            "text": "Outstanding work on network services automation. Manjunath's attention to detail and collaborative approach made our project a success.",
+            "rating": 5
+        },
+        {
+            "name": "Colleague",
+            "position": "Software Engineer",
+            "company": "Cisco",
+            "text": "Great teammate with strong problem-solving skills. Always willing to help and share knowledge with the team.",
+            "rating": 5
+        }
     ]
 }
 
